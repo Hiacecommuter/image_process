@@ -1,0 +1,26 @@
+1 .4 pixel connectivity and 8 pixel connectivity
+
+2. Connected component labeling
+Connected component labeling uses binary images to detect connected regions.
+Color images and higher dimensional data can also be used
+
+3. Connected Component labeling Algorithms
+-- Recursive Tracking
+-- Parallel Growing
+-- Row by Row
+
+4. Classical algorithm
+-- The first pass to record equivalences and assign temporary labels
+-- The second pass to replace each temporary label by the label of its equivalence class
+
+
+Each pixel is checked from the top left corner to the bottom right corner moving linearly.
+For each pixel, only check its above and right
+
+-- check if the pixel is foreground, and move to next if it is background
+-- take label of pixel above or left as its label (use the smallest value)
+-- if left or above is background, create a new label
+-- if the above pixel A and left pixel B, then A B are belong to same.
+-- Replace the label according to the links to root label
+
+https://iq.opengenus.org/connected-component-labeling/
